@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="../fontawesome/css/all.css" />
+    <script src="../fontawesome/js/all.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/style2.css">
+    <link rel="stylesheet" type="text/css" href="../css/style5.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@500&display=swap" rel="stylesheet">
+    <title>Story</title>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="nav-wrapper container">
+                <a href="#" class="hamburger">
+                    <i class="fas fa-bars br"></i>
+                </a>
+                <a href="#!" class="brand-logo center">
+                    StoryBooks
+                </a>
+                <ul class="side-nav mobile-demo">
+                    <li>
+                        <a href="/stories/stories"> Public Stories</a>
+                        <a href="/dashboard"> Dashboard</a>
+                        <a href="/auth/logout"> Logout</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="over-lay"></div>
+        </nav>
+    </header>
+
+    <div style="height: 10vh;"></div>
+
+    <div class="box">
+
+        <div class="row">
+            <div class="col s12 m8">
+                <h3>'#title#'
+                    <small>'#storIcon#'</small>
+                </h3>
+                <div class="card story">
+                    <div class="card-content">
+                        <span class="card-title">'#createdAt#'</span>
+                        <p>'#body#'</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card center-align">
+                    <div class="card-content">
+                        <span class="card-title">'#displayName#'</span>
+                        <div class="myImage">
+                            <img src="'#image#'" alt="403">
+                        </div>
+                    </div>
+                    <div class="card-action">
+                        <a href="/stories/user/'#userId#'"> More From '#firstName#'</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+</body>
+
+<script src="../script/M.sidenav.js"></script>
+
+<script>
+    let story = '#story#' 
+</script>
+
+</html>

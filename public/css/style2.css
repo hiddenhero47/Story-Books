@@ -1,0 +1,242 @@
+body {
+    user-select: none;
+    background-color: rgb(253, 253, 253);
+    margin: 0px;
+    color:rgb(54, 54, 54);
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Macan, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+p {
+    margin: 10px 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    margin-right: 56%;
+    font-size: 1.02rem;
+}
+
+h4 {
+    font-weight: 600;
+    font-size: 2.2rem;
+    color: rgb(54, 54, 54);
+    font-family: 'Roboto', sans-serif;
+    margin-right: 45%;
+}
+
+h6 {
+    color: rgb(54, 54, 54);
+    font-size: 1.05rem;
+    margin-right: 61%;
+}
+
+h4, p, h6 {
+    margin-top: 1%;
+    margin-bottom: 0;
+}
+
+nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.main-container {
+    width: 95%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-wrapper {
+    width: 100vw;
+    background-color: #3b3a3b;
+}
+
+.nav-wrapper a {
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-family: 'Roboto', sans-serif;
+    padding: 12px 0;
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.brand-logo {
+    margin: auto 30%;
+}
+
+.side-nav {
+    width: 200px;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    margin-top: 0;
+    margin-left: 0px;
+    position: absolute;
+    background-color: rgb(253, 253, 253);
+    position: fixed;
+    overflow: hidden;
+    flex-flow: column wrap;
+    list-style: none;
+    padding: 0;
+    visibility: hidden;
+    transform: translate3d(-300px, 0, 0);
+    transition: all 0.8s ease-out;
+    z-index: 3;
+}
+
+.side-nav li {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+}
+
+
+.side-nav a {
+    width: 90%;
+    padding-left: 10%;
+    display: block;
+    font-size: 30px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    color: rgb(54, 54, 54);
+}
+
+.side-nav a:hover{
+    background-color: rgb(241, 241, 241);
+}
+
+.side-nav.show {
+    visibility: visible;
+    transform: translate3d(0, 0, 0);
+}
+
+.over-lay {
+    display: none;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    top: 0;
+    background-color: rgba(68, 68, 68, 0.329);
+    transition: all 0.8s ease-in-out;
+}
+
+.over-lay.show {
+    display: block;
+}
+
+.story {
+    width: 100%;
+    height: auto;
+    margin-top: 1%;
+    display: flex;
+}
+.text {
+    margin-left: 16.4%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.story table tr {
+    display: flex;
+    text-align: left;
+    /* justify-content: space-between; */
+    margin: 5px 0;
+    align-items: center;
+}
+
+.story table tr td {
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+}
+
+.story th, .story td {
+   padding: 10px 5px;
+   padding-right: 1%;
+   text-align: left;
+   font-family: 'Roboto', sans-serif;
+}
+
+.bee {
+   padding: 10px 5px;
+   padding-right: 5%;
+   text-align: left;
+   width: 20%;
+}
+
+.bee:nth-child(2) {
+    width: 41%;
+ }
+
+ .bee a {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    color: #01a9c7;
+ }
+
+ .story table tbody tr:nth-child(odd) {
+    background-color: #f8f6f8;
+ }
+
+ .tool {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+ }
+
+ .btn-float {
+    margin-right: 10px;
+    background-color: #279d8f;
+    padding: 5px 12px;
+    border-radius: 3px;
+    color: #fff;
+ }
+
+ .btn-red {
+    border: none;
+    height: auto;
+    width: auto;
+    background-color: #f73c38;
+    padding: 6.5px 13px;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+ }
+
+.add-btn {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 3%;
+    display: flex;
+    justify-content: right;
+}
+
+.fixed-action-btn {
+    margin-right: 2%;
+}
+
+.btn-larger {
+    border-radius: 50%;
+    padding: 12px 14px;
+    background-color: #f03b36;
+    color: #fff;
+}
+
+.clr {
+    clear: both;
+}

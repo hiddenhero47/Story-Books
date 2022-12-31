@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="../../fontawesome/css/all.css" />
+    <script src="../../fontawesome/js/all.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../css/style2.css">
+    <link rel="stylesheet" type="text/css" href="../../css/style3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Edit-Story</title>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="nav-wrapper container">
+                <a href="#" class="hamburger">
+                    <i class="fas fa-bars br"></i>
+                </a>
+                <a href="#!" class="brand-logo center">
+                    StoryBooks
+                </a>
+                <ul class="side-nav mobile-demo">
+                    <li>
+                        <a href="/stories/stories"> Public Stories</a>
+                        <a href="/dashboard"> Dashboard</a>
+                        <a href="/auth/logout"> Logout</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="over-lay"></div>
+        </nav>
+    </header>
+
+    <div style="height: 7.5vh;"></div>
+
+    <div class="box">
+        <h1> Edit Story</h1>
+        <div class="row">
+            <form action="/stories/'#id#'" method="POST" class="col s12">
+                <input type="hidden" name="_method" value="PUT">
+                <div class="row">
+                    <div class="input-field field">
+                        <label for="title" class="test"> Title </label>
+                        <input type="text" id="title" name="title" value="'#title#'" class="on-input">
+                    </div>
+                </div>
+            
+                <div class="row">
+                    <div class="input-field field1">
+                        <label for="status"> Status </label>
+                        <div class="custom-select">
+                            <select name="status" id="status">
+                                <option value="public">Public</option>
+                                <option value="private">Private</option> 
+                            </select>
+                            <span class="custom-arrow"><i class="fas fa-caret-down"></i></span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="row">
+                    <div class="input-field field2">
+                        <h5>Tell Us Your Story:</h5>
+                        <textarea name="body" id="body"> '#body#' </textarea>
+                    </div>
+                </div>
+            
+                <div class="row">
+                    <div class="input-field field3">
+                        <input type="submit" value="Save" class="btn">
+                        <a href="/dashboard" class="btn orange"> Cancel</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ckeditor/4.20.0/ckeditor.js" 
+integrity="sha512-BcYkQlDTKkWL0Unn6RhsIyd2TMm3CcaPf0Aw1vsV28Dj4tpodobCPiriytfnnndBmiqnbpi2EelwYHHATr04Kg==" 
+crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="../../script/M.sidenav.js"></script>
+<script src="../../script/general.js"></script>
+
+<script>
+    CKEDITOR.replace('body', {
+        Plugin: 'wysiwygarea, toolbar, basicstyles, link'
+    })
+    CKEDITOR.config.height = '19%';
+
+    const myStatus = document.getElementById('status');
+    const myInput = Array.from(myStatus.children);
+    const status = '#status#';
+
+    myInput.forEach(option => {
+        if (option.attributes.value.value == status) {
+            option.setAttribute("selected", true);
+        }
+        else {
+            option.removeAttribute("selected, false");
+        }
+    });
+
+</script>
+
+</html>
+
+
+

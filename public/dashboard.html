@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="./fontawesome/css/all.css" />
+    <script src="./fontawesome/js/all.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/style2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>StoryBooks-Dashboard</title>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="nav-wrapper container">
+                <a href="#" class="hamburger">
+                    <i class="fas fa-bars br"></i>
+                </a>
+                <a href="#!" class="brand-logo center">
+                    StoryBooks
+                </a>
+                <ul class="side-nav mobile-demo">
+                    <li>
+                        <a href="/stories/stories"> Public Stories</a>
+                        <a href="/dashboard"> Dashboard</a>
+                        <a href="/auth/logout"> Logout</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="over-lay"></div>
+        </nav>
+    </header>
+
+    <div style="height: 10vh;"></div>
+
+    <h6>Dashboard</h6>
+    <h4> Welcome '#displayName#' </h4>
+    <p>Here are your stories</p>
+    
+    <div id="MyStoriesTable" class="story"></div>
+
+    <div class="add-btn">
+        <div class="fixed-action-btn">
+            <a href="/stories/add" class="btn-floating btn-larger">
+                <i class="fas fa-plus"></i>
+            </a>
+        </div>
+    </div>
+
+</body>
+
+<script src="./script/M.sidenav.js"></script>
+
+<script>
+    
+    let stories = '#stories#';
+    
+    const table = document.getElementById('MyStoriesTable')
+
+    const outputStories = stories => {
+        let storiesHtml;
+
+        if (stories.length > 0) {
+
+            const storyData = stories.map(story =>`
+            <tr>
+                <td class="bee"> <a href="/stories/${story._id}"> ${story.title}</a></td>
+                <td class="bee">${story.createdAt}</td>
+                <td><span class="dash-status">${story.status}</span></td>
+                <td class="tool">
+                    <a href="/stories/edit/${story._id}" class="btn btn-float">
+                        <i class="fas fa-edit"></i>
+                        </a>
+                        <form action="/stories/${story._id}" method="POST" id="delete-form">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <button type="submit" class="btn btn-red">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+            `).join('')
+
+            storiesHtml = (`
+            <table class="text">
+                <thead>
+                    <tr>
+                    <th class="bee"> Title </th>
+                    <th class="bee"> Data </th>
+                    <th> Status </th>
+                    <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        ${storyData}
+                    </tbody>
+                </table>
+            `)
+        } else {
+            storiesHtml = '<p class="text"> you have not created any stories </p>'
+        }
+
+        table.innerHTML = storiesHtml;
+    }
+
+    outputStories(stories)
+</script>
+
+</html>

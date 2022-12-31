@@ -1,0 +1,131 @@
+h1 {
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 5px;
+}
+
+.box {
+    width: 73%;
+    height: auto;
+    color: #4d4d4d;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.field3 {
+    flex-direction: row;
+}
+
+.row {
+    padding: 1.2% 0;
+}
+
+.box label {
+    font-size: 0.7rem;
+    color: #b4b4b4;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    transition: all 0.2s ease-in-out;
+}
+
+#title {
+    height: 5px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    border: 0;
+    border-bottom: 2px solid #dfdedf;
+    outline: none;
+    background-color: rgb(253, 253, 253);
+    transition: all 0.2s ease-in-out;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    color: #404040;
+}
+
+#title:focus {
+    border-bottom: 2px solid #249c93;
+    height: 20px;
+}
+
+.on-input {
+    height: 20px !important;
+}
+
+.test.color {
+    color: #249c93;
+}
+
+.custom-select {
+    width: 100%;
+    position: relative;
+}
+
+#status {
+    width: 100%;
+    height: 35px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    border: 0;
+    border-bottom: 2px solid #dfdedf;
+    outline: none;
+    margin-top: 5px;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    color: #404040;
+    background-color: rgb(253, 253, 253);
+    outline: none;
+}
+
+.custom-arrow {
+    position: absolute;
+    top: 30%;
+    right: 0;
+    pointer-events: none;
+}
+
+#status option {
+    color: #249c93;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+
+.field2 h5 {
+    padding: 0;
+    margin: 0;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    padding-bottom: 10px;
+}
+
+#body {
+    height: 10vh;
+    border: 3px solid #dfdedf;
+    border-bottom: 2.5px solid #cacaca;
+    background-color: rgb(253, 253, 253);
+}
+
+.btn {
+    appearance: none;
+    border: 0;
+    padding: 7.5px 12px;
+    border-radius: 3px;
+    color: rgb(252, 252, 252);
+    background-color: #249c93;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.orange {
+    margin-left: 3px;
+    background-color: #ff8d28;
+}

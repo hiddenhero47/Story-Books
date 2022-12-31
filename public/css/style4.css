@@ -1,0 +1,137 @@
+.box {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+h1{
+    font-weight: 600;
+    font-size: 2.7rem;
+    color: rgb(54, 54, 54);
+    font-family: 'Roboto', sans-serif;
+    margin-right: 58.5%;
+}
+
+.row {
+    width: 70%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 1em;
+    grid-row-gap: 2em;
+    margin-left: 3%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 0px 5px rgba(59, 59, 59, 0.363);
+    border-radius: 4px;
+    position: relative;
+    /* padding-bottom: 5%; */
+}
+
+.card p {
+    text-align: center;
+    font-size: 0.8rem;
+    width: 250px;
+    margin: auto;
+    color: rgb(102, 102, 102);
+}
+
+.card-image {
+    position: absolute;
+    right: 10%;
+    top: -17px;
+}
+
+.card-image a {
+    border-radius: 50%;
+    background-color: #2188ed;
+    padding: 10px 9.2px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: aliceblue;
+}
+
+.card-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-content h5 {
+    font-size: 1.17rem;
+    color: rgb(54, 54, 54);
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 10px;
+}
+
+.chip {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e2dfdf;
+    border-radius: 15px;
+    padding-right: 15px;
+    margin-bottom: 6%;
+    margin-top: 5%;
+}
+
+.image-box {
+    position: relative;
+    border-radius: 30px;
+    width: 25px;
+    height: 25px;
+    overflow: hidden;
+}
+
+.image-box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.chip a {
+    text-decoration: none;
+    font-size: 0.77rem;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 10px;
+    color: #34a4e0;
+}
+
+.card-action {
+    width: 100%;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px solid rgb(243, 243, 243);
+}
+
+.btn {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 2px;
+    color: #f8f8f8;
+}
+
+.grey {
+    background-color: #959395;
+}
